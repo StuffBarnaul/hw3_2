@@ -1,24 +1,28 @@
-import React, {Component} from "react";
+import React, {useState} from "react";
+import Content from "./Content";
+import RecursiveButton from "./RecursiveButton";
 
-class Video3 extends Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            mount: true,
-            ignoreProp: 0,
-            seed: 10,
-            showError: false,
-        }
+function Video3() {
+    const [showMode, setShowMode] = useState(true)
+    const handleClick = () => {
+        setShowMode(!showMode)
+    }
+    let content = null
+    if (showMode) {
+        content = <Content/>
     }
 
-    render() {
-        return (
-            <>
+    return (
+        <>
+            <div className={"App-link"}>Video3 - Class Component</div>
+            <button onClick={handleClick}>Toggle</button>
+            {content}
+            <div>
+                <RecursiveButton/>
+            </div>
+        </>
+    )
 
-            </>
-        )
-    }
 }
 
 export default Video3;
