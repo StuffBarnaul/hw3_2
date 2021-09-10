@@ -1,25 +1,18 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import Video1 from "./video1/Video1";
+import Video2 from "./video2/Video2";
+import Video3 from "./video3/Video3";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <Video1/>
+            <Video2/>
+            <Video3/>
+        </>
+    );
 }
 
 export default App;
